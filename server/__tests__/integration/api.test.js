@@ -10,7 +10,7 @@ describe('History API endpoints', () =>{
     
       beforeAll(() => {
         api = app.listen(4000, () => {
-          console.log('Test server running on port 4000')
+          console.log('Test server running on port 3100')
         })
       })
     
@@ -19,7 +19,7 @@ describe('History API endpoints', () =>{
         api.close(done)
       })
 
-      xdescribe('GET /', () => {
+      describe('GET /', () => {
         it('responds to GET / with a message and a description', async () => {
           const response = await request(api).get('/')
       
