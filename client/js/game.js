@@ -15,7 +15,9 @@ function displayFact(index) {
   card.style.maxWidth = "350px";
 
   const img = document.createElement("img");
-  img.src = `${data.fact_img}`;
+  // img.src = `${data.fact_img}`;
+  img.src = `${data.fact_img.replace(/^client\//, "")}`;
+
 
   img.alt = "Fact image";
   img.className = "card-img-top img-fluid";
